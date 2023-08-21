@@ -2,8 +2,6 @@
 
 ## This repo shows an example of how to upload a certificate for the root CA in the Vault PKI engine. First, you will create a certificate for your root CA using openssl. Then you will upload the certificate into Vault PKI engine, and create the root CA within Vault. Finally, create a role and issue the certificate.
 
-Why do we need this? Because the API call `/pki/intermediate/set-signed` does not support uploading a pem bundle.
-
 ### Generate root CA cert and key. Then format the pem file for upload to Vault.
 
 ```shell
