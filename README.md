@@ -7,6 +7,7 @@ Why do we need this? Because the API call `/pki/intermediate/set-signed` does no
 ### Generate root CA cert and key. Then format the pem file for upload to Vault.
 
 ```shell
+mkdir opensslca
 openssl genrsa -out opensslca/rootCAKey.pem 2048
 openssl req -x509 -sha256 -new -nodes -key opensslca/rootCAKey.pem -days 3650 -out opensslca/rootCACert.pem
 openssl x509 -in opensslca/rootCACert.pem -text
